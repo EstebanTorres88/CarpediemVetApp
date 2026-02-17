@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import {  } from './containers' 
+import { Header } from './containers' 
  {/*AQUI SE IMPORTAN LOS CONTAINERS*/}
 import { PrivateGuard} from './guard/PrivatGuard'
 
@@ -11,7 +11,7 @@ export const AppRouter = () => {
         <BrowserRouter>
 
             <div className="app-container">
-                {/* HEADER*/}
+                {<Header></Header>}
 
                 <div className="main-container">
                     <Routes>
