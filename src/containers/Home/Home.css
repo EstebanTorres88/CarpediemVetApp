@@ -1,0 +1,36 @@
+.home{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 0.2rem;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+.home__quick-links{
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__welcome{
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--dark-coffee);
+    font-weight: bolder;
+    max-width: 300px;
+
+}
+
+@media screen and (max-width:400px) {
+    .home__quick-links{
+        flex-direction: column;
+    }
+    
+}

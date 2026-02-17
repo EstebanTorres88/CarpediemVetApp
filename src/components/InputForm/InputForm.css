@@ -1,0 +1,31 @@
+.input-field {
+    display: flex;
+    gap: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 220px;
+    background-color: var(--soft-beige);
+    color: var(--dark-coffee);
+
+}
+
+.input-field__icon {
+    color: var(--dark-coffee);
+    transition: all 0.3s ease;
+}
+
+.input-field__icon:hover{
+    color: var(--soft-coffee);
+}
+
+
+.input{
+    border: none;
+    padding: 8px;
+    width: 170px;
+    border-radius: 8px;
+    background-color: var(--secondary-soft-beige);
+    color: var(--dark-coffee);
+    
+}

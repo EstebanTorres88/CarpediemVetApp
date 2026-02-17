@@ -1,0 +1,52 @@
+.pets-sumary-card {
+    background-color: var(--soft-coffee);
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 38vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    min-height: 40vh;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.pets-sumary-card:hover{
+     background-color: var(--dark-coffee);
+}
+.pets-sumary-card__title{
+    color: var(--soft-beige);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pets-sumary-card__pets-amount{
+    text-transform: uppercase;
+    font-size: 170px;
+    color: var(--soft-beige);
+    justify-self: center;
+    text-align: center;
+}
+
+
+
+@media screen and (min-width:760px) {
+    .pets-sumary-card{
+        min-width: 80vw;
+        min-height: 35vh;
+    }
+
+    
+}
+
+@media screen and (min-width:820px) {
+    .pets-sumary-card{
+        min-width: 35vw;
+        min-height: 30vh;
+    }
+
+    
+}
