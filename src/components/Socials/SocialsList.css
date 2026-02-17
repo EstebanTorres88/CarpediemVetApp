@@ -1,0 +1,23 @@
+.socials-list{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+
+.social-list__logo{
+    width: 35px;
+    height: 35px;
+    transition: all 0.6s ease;
+    
+}
+
+
+.social-list__logo:hover{
+    transform: translateY(-10px) scale(1.05); 
+}
+
+
+
