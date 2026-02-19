@@ -1,0 +1,15 @@
+.dashboard {
+    display: flex;
+    gap: 35px;
+    justify-content: space-around;
+    align-items: flex-start;
+
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    .dashboard{
+        flex-direction: column;
+    }
+}

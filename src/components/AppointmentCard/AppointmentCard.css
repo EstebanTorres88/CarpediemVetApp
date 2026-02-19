@@ -1,0 +1,83 @@
+.appointment-card {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--soft-coffee);
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 35vw;
+     
+    min-height: 40vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.appointment-card:hover {
+    background-color: var(--dark-coffee);
+}
+
+.appointment-card__title {
+    color: var(--soft-beige);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.appointment-card__pet-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.appointment-card__pet-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 1px solid var(--soft-beige);
+}
+
+.appointment-card__date {
+    text-transform: uppercase;
+    color: var(--secondary-latte);
+    font-weight: bolder;
+}
+
+.appointment-card__reason {
+    color: var(--soft-beige);
+    font-weight: bold;
+}
+
+
+.appointment-card__pet-name{
+    color: var(--soft-beige);
+    text-transform: uppercase;
+}
+
+
+@media screen and (min-width:760px) {
+    .appointment-card{
+        min-width: 80vw;
+        min-height: 35vh;
+    }
+
+    
+}
+
+
+@media screen and (min-width:820px) {
+    .appointment-card{
+        min-width: 35vw;
+        min-height: 30vh;
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    .appointment-card__pet-info{
+        flex-direction: column;
+
+    }
+}

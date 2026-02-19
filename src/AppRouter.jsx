@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { Header, Footer } from './containers' 
+import { Header, Footer, Home } from './containers' 
  {/*AQUI SE IMPORTAN LOS CONTAINERS*/}
 import { PrivateGuard} from './guard/PrivatGuard'
 
@@ -16,10 +16,9 @@ export const AppRouter = () => {
                 <div className="main-container">
                     <Routes>
                         <Route path='/' element={<Navigate to='/home' />}></Route>
-                        <Route path='/home' element={''}></Route> {/* HOME*/}
                         <Route element={<PrivateGuard></PrivateGuard>}>
 
-
+                            <Route path='/home' element={<Home></Home>}></Route> {}
                             <Route path='/mypets' element={''}></Route> {/* MYPETS*/}
                             <Route path='/profile' element={''}></Route> {/* CLIENT PROFILE*/}
                             <Route path='/mypets/:petName' element={''}></Route> {/* PET PROFILE*/}
