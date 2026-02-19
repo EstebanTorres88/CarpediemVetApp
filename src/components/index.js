@@ -5,9 +5,10 @@ export * from './HomeCard/HomeCard'
 export * from './AppointmentCard/AppointmentCard'
 export * from './InputForm/InputForm'
 export * from './PetsSumaryCard/PetsSumaryCard'
+export * from './PetCard/PetCard'
 
 /*
-export * from './PetCard/PetCard'
+
 */
 
 
