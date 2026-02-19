@@ -1,0 +1,21 @@
+.my-pets{
+    display: flex;
+    flex-flow:column wrap;   
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.my-pets__card{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-pets__title{
+    text-transform: uppercase;
+    color: var(--dark-coffee);
+}
