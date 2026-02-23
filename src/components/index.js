@@ -7,6 +7,7 @@ export * from './InputForm/InputForm'
 export * from './PetsSumaryCard/PetsSumaryCard'
 export * from './PetCard/PetCard'
 export * from './AppointmentsHistory/AppointmentsHistory'
+export * from './VaccinesHistory'
 
 //export * from './VaccinesHistory/VaccinesHistory'
 
