@@ -1,0 +1,29 @@
+.vaccines-history{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: var(--soft-coffee);
+    width: 45vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    color: var(--soft-beige);
+    transition: all 0.5s ease-in;
+}
+
+.vaccines-history:hover{
+    background-color: var(--dark-coffee);
+
+}
+
+.vaccines-history__vaccine-date{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.vaccines-history__vaccine-name{
+    width: 100px;
+    text-align: center;
+}
