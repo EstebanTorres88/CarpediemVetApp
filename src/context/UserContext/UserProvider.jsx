@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export const UserContext = createContext(null)
 const USER_KEY = 'user'
+
 const USER_INITIAL_STATE = {
     name: '',
     email:'',
