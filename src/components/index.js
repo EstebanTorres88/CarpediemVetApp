@@ -8,6 +8,8 @@ export * from './PetsSumaryCard/PetsSumaryCard'
 export * from './PetCard/PetCard'
 export * from './AppointmentsHistory/AppointmentsHistory'
 export * from './VaccinesHistory/VaccinesHistory'
+export * from './GeneralDetails/GeneralDetails'
+export * from './Tabs/Tabs'
 
 
 /*Cada vez que se añade un componente hay que descomentar la linea que lo exporta*/

@@ -8,9 +8,9 @@ import {GeneralDetails, Tabs, VaccinesHistory, AppointmentsHistory} from '../../
 export const PetProfile = () => {
     const { petName } = useParams()
     const { getPetInfo } = usePetContext()
-    const {petInfo} = getPetInfo(petName)
+    const petInfo = getPetInfo(petName)
     const [activeTab, setActiveTab] = useState('summary')
-    const petVaccines = petInfo.vaccines
+    const petVaccines = petInfo.vaccines   
     const petAppointments = petInfo.vetAppointments
 
     const toggleActiveTab = (tabName) => {
@@ -23,7 +23,7 @@ export const PetProfile = () => {
         <h2 className='pet-ptofile-title'>Perfil de {petInfo.name}</h2>
 
         <div className='pet-tabs'>
-          <tabs parentMethod={toggleActiveTab}></tabs>
+          <Tabs parentMethod={toggleActiveTab}></Tabs>
         </div>
 
         <div className='pet-content'>
