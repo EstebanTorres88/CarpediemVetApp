@@ -1,0 +1,35 @@
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.tabs__button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+    margin-left: 20px;
+    background-color: var(--soft-beige);
+    color: var(--dark-coffee);
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.5s ease;
+}
+
+
+.tabs__button:hover {
+    background-color: var(--secondary-soft-beige);
+}
+
+.tabs__button:active {
+    transform: translateY(2px);
+    background-color: var(--secondary-soft-beige);
+
+}
