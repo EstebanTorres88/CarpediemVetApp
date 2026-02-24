@@ -1,0 +1,30 @@
+.pet-profile {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem;
+    margin-top: 3rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-icon {
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    color: var(--dark-coffee);
+    transition: all 0.5s ease-in-out;
+
+}
+
+.back-icon:hover {
+    color: var(--soft-beige);
+    transform: translateY(-8px) scale(1.05);
+}
+
+
+.pet-content{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+}

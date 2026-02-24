@@ -1,0 +1,55 @@
+.pet-profile__resume {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: var(--dark-coffee);
+    border-radius: 8px;
+    min-width: 480px;
+
+
+}
+
+.pet-profile__title {
+    color: var(--dark-coffee);
+    align-self: center;
+}
+
+
+.pet-profile__details {
+    color: var(--secondary-latte);
+    gap: 15px;
+    text-align: center;
+}
+
+.details__title {
+    text-transform: uppercase;
+}
+
+.details__name {
+    color: var(--soft-beige);
+}
+
+
+.pet-profile__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid var(--soft-beige);
+
+
+}
+
+
+
+@media screen and (max-width:530px) {
+    .pet-profile__resume {
+        min-width: 300px;
+    }
+
+
+
+
+}
