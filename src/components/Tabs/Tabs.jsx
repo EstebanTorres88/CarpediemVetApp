@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './PetProfileTabs.css'
+import './Tabs.css'
 export const Tabs = ({ parentMethod }) => {
 
   return (
