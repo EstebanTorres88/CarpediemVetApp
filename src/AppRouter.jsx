@@ -16,9 +16,10 @@ export const AppRouter = () => {
                 <div className="main-container">
                     <Routes>
                         <Route path='/' element={<Navigate to='/home' />}></Route>
+                        <Route path='/home' element={<Home></Home>}></Route>
                         <Route element={<PrivateGuard></PrivateGuard>}>
 
-                            <Route path='/home' element={<Home></Home>}></Route>
+                         
                             <Route path='/mypets' element={<MyPets></MyPets>}></Route> 
                             <Route path='/profile' element={''}></Route> {/* CLIENT PROFILE*/}
                             <Route path='/mypets/:petName' element={<PetProfile></PetProfile>}></Route>
