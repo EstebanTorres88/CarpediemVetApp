@@ -10,6 +10,5 @@ export * from './AppointmentsHistory/AppointmentsHistory'
 export * from './VaccinesHistory/VaccinesHistory'
 export * from './GeneralDetails/GeneralDetails'
 export * from './Tabs/Tabs'
+export * from './ConfirmationModal/ConfirmationModal'
 
-
-/*Cada vez que se añade un componente hay que descomentar la linea que lo exporta*/
