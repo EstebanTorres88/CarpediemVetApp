@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import { useUserContext } from '../../context/UserContext/UseUserContext'
 import { User, Mail, Phone, CheckCircle, XCircle } from 'lucide-react'
+
 import { InputForm, ConfirmationModal } from '../../components'
+import { useUserContext } from '../../context/UserContext/UseUserContext'
+import { validateUserData } from '../../utils'
+
 import './ClientProfile.css'
 
 
@@ -29,7 +32,7 @@ export const ClientProfile = () => {
 
 
   const handleEdit = () => setIsDisabled(false)
-  const handleConfirmation = () => setShowModal(false)
+  const handleClose = () => setShowModal(false)
   const isFormUnchanged = () => formData.username === user.name && formData.useremail === user.email && formData.userphone === user.phone
 
 
@@ -48,49 +51,23 @@ export const ClientProfile = () => {
     const email = formData.useremail.trim()
     const phone = formData.userphone.trim()
 
-    const phoneRegex = /^[0-9]{8}$/
-    const emailRegex = /^\w+\@[a-zA-Z]+\.[a-z]{2,6}$/
 
-    if (name.length === 0 || email.length === 0 || phone.length === 0) {
-      setModalTitle('Debes llenar todos los campos solicitados')
+    const validation = validateUserData(name, email, phone)
+
+    if (!validation.isSuccesful) {
       setShowModal(true)
-      setIsSuccesful(false)
-      return
-
-
-    }
-
-    if (!phoneRegex.test(phone)) {
-      setModalTitle('El número de teléfono debe tener solamente números y debe contener 8 caracteres')
-      setShowModal(true)
-      setIsSuccesful(false)
-      return
-
-
-    }
-
-
-    if (name.length < 3) {
-      setModalTitle('Verifica el nombre ingresado, es muy corto')
-      setShowModal(true)
-      setIsSuccesful(false)
+      setModalTitle(validation.modalTitle)
+      setIsSuccesful(validation.isSuccesful)
+      setIsDisabled(false)
       return
     }
 
+    updateUser(name, email, phone)
 
-    if (!emailRegex.test(email)) {
-      setModalTitle('Por favor, ingresa un correo válido ejemplo: usuario@dominio.com')
-      setShowModal(true)
-      setIsSuccesful(false)
-      return
-    }
-
-
-
-    updateUser(formData.username, formData.useremail, formData.userphone)
-    setIsDisabled(true)
     setShowModal(true)
-    setIsSuccesful(true)
+    setIsDisabled(true)
+    setModalTitle(validation.modalTitle)
+    setIsSuccesful(validation.isSuccesful)
 
   }
 
@@ -106,46 +83,46 @@ export const ClientProfile = () => {
 
     <div className="client-profile-card">
 
-    
-
-
-        <h2 className='client-profile-card__title'>Editar Perfil</h2>
-
-        <form className='client-profile-card__form' onSubmit={handleSubmit}>
 
 
 
-          <InputForm Icon={User} inputName={'username'} value={formData.username} placeholder={'Escribe tu nombre'} onChange={handleChange} disabled={isDisabled}></InputForm>
+      <h2 className='client-profile-card__title'>Editar Perfil</h2>
 
-          <InputForm Icon={Mail} inputName={'useremail'} value={formData.useremail} placeholder={'tunombre@ejemplo.com'} onChange={handleChange} disabled={isDisabled}></InputForm>
-
-          <InputForm Icon={Phone} inputName={'userphone'} value={formData.userphone} placeholder={'Tu numero de teléfono'} onChange={handleChange} disabled={isDisabled}></InputForm>
+      <form className='client-profile-card__form' onSubmit={handleSubmit}>
 
 
 
+        <InputForm Icon={User} inputName={'username'} value={formData.username} placeholder={'Escribe tu nombre'} onChange={handleChange} disabled={isDisabled}></InputForm>
 
-          {isDisabled && (<button type='button' className='client-profile-card__form__button client-profile-card__form__edit-button' onClick={handleEdit}>Editar</button>)}
+        <InputForm Icon={Mail} inputName={'useremail'} value={formData.useremail} placeholder={'tunombre@ejemplo.com'} onChange={handleChange} disabled={isDisabled}></InputForm>
 
-
-
-          {!isDisabled && (<button type='submit' className={`client-profile-card__form__button ${isFormUnchanged() ? 'client-profile__form__disabled-button' : 'client-profile__form__enabled-button'}`} disabled={isFormUnchanged()}  >Guardar Cambios</button>)}
+        <InputForm Icon={Phone} inputName={'userphone'} value={formData.userphone} placeholder={'Tu numero de teléfono'} onChange={handleChange} disabled={isDisabled}></InputForm>
 
 
 
 
-
-
-        </form>
+        {isDisabled && (<button type='button' className='client-profile-card__form__button client-profile-card__form__edit-button' onClick={handleEdit}>Editar</button>)}
 
 
 
-        {isSuccesful && <ConfirmationModal isOpen={showModal} onCloseMethod={handleConfirmation} label={'Tus cambios han sido guardados exitosamente'} Icon={CheckCircle} buttonLabel={'Ok'}></ConfirmationModal>}
-        {!isSuccesful && <ConfirmationModal isOpen={showModal} onCloseMethod={handleConfirmation} label={modalTitle} Icon={XCircle} buttonLabel={'Volver a Intentarlo'}></ConfirmationModal>}
+        {!isDisabled && (<button type='submit' className={`client-profile-card__form__button ${isFormUnchanged() ? 'client-profile__form__disabled-button' : 'client-profile__form__enabled-button'}`} disabled={isFormUnchanged()}  >Guardar Cambios</button>)}
 
 
 
 
 
-      </div>
-      )
+
+      </form>
+
+
+
+      {isSuccesful && <ConfirmationModal isOpen={showModal} onCloseMethod={handleClose} label={modalTitle} Icon={CheckCircle} buttonLabel={'Ok'}></ConfirmationModal>}
+      {!isSuccesful && <ConfirmationModal isOpen={showModal} onCloseMethod={handleClose} label={modalTitle} Icon={XCircle} buttonLabel={'Volver a Intentarlo'}></ConfirmationModal>}
+
+
+
+
+
+    </div>
+  )
 }

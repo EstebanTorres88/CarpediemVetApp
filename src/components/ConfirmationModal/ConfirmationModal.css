@@ -21,9 +21,8 @@
   min-width: 35vw;
   min-height: 35vh;
   background-color: var(--bg-gradient);
-  display: flex;
-  visibility: hidden;
-  opacity: 0;
+  display: none;
+  
   justify-content: center;
   align-items: center;
 
@@ -37,15 +36,13 @@
   color: var(--soft-beige);
   z-index: 300;
 
-  transition: opacity 0.5s ease-in-out;
 
 }
 
 
 .confirmation-modal-open {
 
-  visibility: visible;
-  opacity: 1;
+  display: flex;
 
 
 }

@@ -9,6 +9,7 @@
 body{
     background-color: var(--bg-beige);
     font-family: var(--font-main);
+    overflow-x: hidden;
 }
 
 
