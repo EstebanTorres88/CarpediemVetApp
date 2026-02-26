@@ -33,3 +33,9 @@
     background-color: var(--secondary-soft-beige);
 
 }
+
+/* highlight current tab */
+.tabs__button--active {
+    background-color: var(--dark-coffee);
+    color: var(--secondary-soft-beige);
+}

@@ -21,7 +21,6 @@ export const Navbar = () => {
   return (
     <div>
       <List width={30} height={30} className='icon icon-menu' onClick={toggleMenu} />
-
       <nav className= {`nav ${isOpen ? 'visible' : 'hidden'}`}>
         <X width={30} height={30} className='icon icon-close' onClick={toggleMenu}  />
         <ul className='nav_list'>
