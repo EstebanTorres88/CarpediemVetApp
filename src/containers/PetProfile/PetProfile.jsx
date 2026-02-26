@@ -23,7 +23,7 @@ export const PetProfile = () => {
         <h2 className='pet-ptofile-title'>Perfil de {petInfo.name}</h2>
 
         <div className='pet-tabs'>
-          <Tabs parentMethod={toggleActiveTab}></Tabs>
+          <Tabs parentMethod={toggleActiveTab} activeTab={activeTab} />
         </div>
 
         <div className='pet-content'>
