@@ -1,12 +1,16 @@
+
 .input-field {
     display: flex;
     gap: 15px;
     border: none;
     border-radius: 5px;
     padding: 5px;
-    width: 220px;
+    min-width: 35vw;
+    height: 55px;
     background-color: var(--soft-beige);
     color: var(--dark-coffee);
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -23,9 +27,19 @@
 .input{
     border: none;
     padding: 8px;
-    width: 170px;
+    min-width: 10vw;
     border-radius: 8px;
     background-color: var(--secondary-soft-beige);
     color: var(--dark-coffee);
+    
+}
+
+
+
+@media screen and (min-width : 800px) {
+    .input-field{
+        max-width: 30vw;
+        min-height: 5vh;
+    }
     
 }
