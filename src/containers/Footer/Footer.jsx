@@ -8,7 +8,7 @@ export const Footer = () => {
 
         <footer className='footer'>
 
-            <p className='footer_copy'>&copy; Carpediem -  2026 </p>
+            <p className='footer_copy'>&copy; © 2026 Carpediem. Todos los derechos reservados. </p>
 
             <SocialsList></SocialsList>
 
