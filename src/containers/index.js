@@ -5,5 +5,6 @@ export * from './Home/Home.jsx'
 export * from './MyPets/MyPets.jsx'
 export * from './PetProfile/PetProfile.jsx'
 export * from './ClientProfile/ClientProfile.jsx'
+export * from './LoginModal/LoginModal.jsx'
 
 

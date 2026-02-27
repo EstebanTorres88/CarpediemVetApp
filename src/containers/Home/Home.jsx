@@ -1,9 +1,9 @@
 import React from 'react'
 import { useUserContext } from '../../context/UserContext/UseUserContext'
 import './Home.css'
-import { LoginModal, HomeCard } from '../../components'
+import {  HomeCard } from '../../components'
 import { PawPrint, User } from 'lucide-react'
-import { HomeDashboard } from '../../containers'
+import {LoginModal, HomeDashboard } from '../../containers'
 
 export const Home = () => {
   const { user, isUserUndefined } = useUserContext()

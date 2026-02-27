@@ -12,20 +12,20 @@ export const PET_LIST = [
     vetAppointments: [
       {
         id: 'a1',
-        date: '2025-10-15',
-        state: 'Realized', 
+        date: '2026-10-15T00:00',
+        state: 'Pending', 
         reason: 'Checkeo Anual'
       },
       {
         id: 'a2',
-        date: '2026-03-20T00:00',
+        date: '2026-03-18T00:00',
         state: 'Pending', 
         reason: 'Limpieza Dental'
       }
     ],
     vaccines: [
-      { name: 'Rabia', date: '2024-05-10' },
-      { name: 'Distemper', date: '2024-05-10' }
+      { name: 'Rabia', date: '2027-01-15T00:00' },
+      { name: 'Distemper', date: '2026-03-10T00:00' }
     ]
   },
 
@@ -41,13 +41,13 @@ export const PET_LIST = [
     vetAppointments: [
       {
         id: 'a3',
-        date: '2026-02-15T00:00',
+        date: '2026-08-15T00:00',
         state: 'Pending',
         reason: 'Irritación en los ojos'
       }
     ],
     vaccines: [
-      { name: 'Leucemia Felina', date: '2025-01-20' }
+      { name: 'Leucemia Felina', date: '2027-01-20T00:00' }
     ]
   },
 
@@ -64,8 +64,8 @@ export const PET_LIST = [
 
     vetAppointments: [], 
     vaccines: [
-      { name: 'Parvovirus', date: '2023-11-12' },
-      { name: 'Bordetella', date: '2024-12-01' }
+      { name: 'Parvovirus', date: '2027-11-12T00:00' },
+      { name: 'Bordetella', date: '2026-12-01T00:00' }
     ]
   },
   {

@@ -1,6 +1,5 @@
 export * from './NavBar/Navbar' 
 export * from './Socials/SocialsList'
-export * from './LoginModal/LoginModal'
 export * from './HomeCard/HomeCard'
 export * from './AppointmentCard/AppointmentCard'
 export * from './InputForm/InputForm'
