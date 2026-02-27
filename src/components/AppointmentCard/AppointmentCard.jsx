@@ -1,8 +1,10 @@
 import React from 'react'
 import './AppointmentCard.css'
 import PropTypes from 'prop-types'
+import { dateFormatter } from '../../utils'
 
 export const AppointmentCard = ({imagePath, petName, date, reason}) => {
+    const formattedDate = dateFormatter(date)
     return (
         <div>
 
@@ -12,7 +14,7 @@ export const AppointmentCard = ({imagePath, petName, date, reason}) => {
                     <img className='appointment-card__pet-img' src={imagePath} alt="pet-image" />
                     <h3 className='appointment-card__pet-name'>{petName}</h3>
                 </div>
-                <p className='appointment-card__date'>{date}</p>
+                <p className='appointment-card__date'>{formattedDate}</p>
                 <p className='appointment-card__reason'>Motivo: {reason}</p>
             </div>
         </div>
