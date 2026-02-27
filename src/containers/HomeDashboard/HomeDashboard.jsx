@@ -15,7 +15,7 @@ export const HomeDashboard = () => {
     return (
         <div className="dashboard">
 
-            <AppointmentCard imagePath={nextAppointment.petImage} petName={nextAppointment.petName} date={nextAppointment.date} reason={nextAppointment.reason}></AppointmentCard>
+            <AppointmentCard imagePath={nextAppointment.petImage} petName={nextAppointment.petName} date={formatedDate} reason={nextAppointment.reason}></AppointmentCard>
 
             <PetsSumaryCard petsAmount={petsAmount}></PetsSumaryCard>
 
